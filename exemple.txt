@@ -1,1 +1,1 @@
-terraform studies
+this is a external variable content using -var-file

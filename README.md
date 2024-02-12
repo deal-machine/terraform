@@ -28,8 +28,15 @@ Terraform vs Ansible
 
 <br>
 
-HCL - HashCorp Configuration Language
+## HCL - HashiCorp Configuration Language
 
-- initialize: terraform init
-- plan: terraform plan
-- execute: terraform apply
+- initialize
+  - ``terraform init``
+- plan
+  - ``terraform plan``
+- execute
+  - ``terraform apply``
+- variables
+  - direct on tf file
+  - terraform.tfvars
+  - ``-var`` or ``-var-file`` on apply command
