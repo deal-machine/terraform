@@ -1,0 +1,1 @@
+content = "this is a external variable content using terraform.tfvars"

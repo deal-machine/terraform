@@ -1,1 +1,1 @@
-this is a external variable content using -var-file
+this is a external variable content using terraform.tfvars

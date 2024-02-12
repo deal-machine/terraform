@@ -1,1 +1,0 @@
-content = "this is a external variable content using -var-file"

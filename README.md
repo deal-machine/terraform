@@ -40,3 +40,5 @@ Terraform vs Ansible
   - direct on tf file
   - terraform.tfvars
   - ``-var`` or ``-var-file`` on apply command
+- outputs
+- data sources
