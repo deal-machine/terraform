@@ -2,7 +2,11 @@
 <img width="300" src="https://user-images.githubusercontent.com/25181517/183345121-36788a6e-5462-424a-be67-af1ebeda79a2.png" />
 </div>
 
-## Terraform  [terraform.io](https://www.terraform.io/)
+<div align="right">
+<a href="https://www.terraform.io/">terraform.io</a>
+</div>
+
+<br>
 
 > Código que gera e **provisiona** infraestrutura IaC - *Infrastructure as Code*. Cria todos os componentes da nossa infraestrutura em diversos *providers*, através de uma camada de abstração.
 
