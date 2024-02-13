@@ -45,14 +45,15 @@ Terraform vs Ansible
 
 <br> 
 
-VPC - Virtual Private Cloud
-Subnet
-AV - Availability Zones
-Route Table - Routing table for VPC, describe available subnets
-Internet Gateway - Allow external(public) access
-Security Group - Firewall
-Ingress - quem acessa nossos recursos
-Egress - quem nossos recursos acessam
+## VPC - Virtual Private Cloud
+
+- Subnet
+- AV - Availability Zones
+- Route Table - Routing table for VPC, describe available subnets
+- Internet Gateway - Allow external(public) access
+- Security Group - Firewall
+- Ingress - quem acessa nossos recursos
+- Egress - quem nossos recursos acessam
 
 <div align="center">
   <img width="1000" src="./assets/vpc.png" />
