@@ -19,3 +19,8 @@ variable "role_name" {
   type = string
   description = "role name"
 }
+
+variable "retention_days" {
+  type = number
+  description = "log retention days"
+}
