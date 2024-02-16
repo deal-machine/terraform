@@ -15,3 +15,7 @@ variable prefix {
     type = string
     description = "prefix name"
 } 
+variable "role_name" {
+  type = string
+  description = "role name"
+}
