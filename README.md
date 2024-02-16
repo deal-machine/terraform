@@ -43,6 +43,12 @@ Terraform vs Ansible
 - outputs
 - data sources
 
+## To run 
+
+> create aws.tfvars and add variables
+
+`terraform apply -var-file=aws.tfvars --auto-approve`
+
 <br> 
 
 ## VPC - Virtual Private Cloud
