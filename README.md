@@ -36,6 +36,8 @@ Terraform vs Ansible
   - ``terraform plan``
 - execute
   - ``terraform apply``
+- finish
+  - ``terraform destroy``
 - variables
   - direct on tf file
   - terraform.tfvars
@@ -48,6 +50,12 @@ Terraform vs Ansible
 > create aws.tfvars and add variables
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
+
+
+## To destroy 
+
+
+`terraform destroy -var-file=aws.tfvars --auto-approve`
 
 <br> 
 
