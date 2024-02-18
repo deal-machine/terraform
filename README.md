@@ -57,10 +57,15 @@ Terraform vs Ansible
 
 `terraform destroy -var-file=aws.tfvars --auto-approve`
 
+## To connect on kubectl
+
+`aws eks --region {{us-east-1}} update-kubeconfig --name {{deal-cluster}}`
+
 <br> 
 
-## VPC - Virtual Private Cloud
+## AWS Infrastructure
 
+- VPC - Virtual Private Cloud
 - Subnet
 - AV - Availability Zones
 - Route Table - Routing table for VPC, describe available subnets
