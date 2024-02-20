@@ -45,21 +45,26 @@ Terraform vs Ansible
 - outputs
 - data sources
 
-## To run 
 
-> create aws.tfvars and add variables
+## To init
+> configure aws.tfvars with aws config variables
+
+`terraform init -var-file=aws.tfvars`
+
+## To run 
+> configure aws.tfvars with aws config variables
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
 
 
 ## To destroy 
-
+> configure aws.tfvars with aws config variables
 
 `terraform destroy -var-file=aws.tfvars --auto-approve`
 
 ## To connect on kubectl
 
-`aws eks --region {{us-east-1}} update-kubeconfig --name {{deal-cluster}}`
+`aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>`
 
 <br> 
 

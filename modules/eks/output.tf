@@ -38,3 +38,7 @@ resource "local_file" "kubeconfig" {
   filename = "kubeconfig"
   content = local.kubeconfig
 }
+
+output "sg_ids" {
+  value = aws_security_group.sg.id
+}

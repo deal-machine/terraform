@@ -11,3 +11,9 @@ module "eks" {
     retention_days = var.retention_days
     role_arn = var.role_arn
 }
+module "rds" {
+  source = "./modules/rds"
+  prefix = var.prefix
+  subnet_ids = module.vpc.subnet_ids
+  sg_ids = [module.eks.sg_ids]
+}
