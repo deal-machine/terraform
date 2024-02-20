@@ -45,20 +45,22 @@ Terraform vs Ansible
 - outputs
 - data sources
 
+<br>
+
+> Created AWS Bucket to storage .tfstate -> deal-terraform-bucket
+> 
+> Configure aws.tfvars with aws config variables -> access_key, secret_key, token and region(us-east-1)
 
 ## To init
-> configure aws.tfvars with aws config variables
 
 `terraform init -var-file=aws.tfvars`
 
 ## To run 
-> configure aws.tfvars with aws config variables
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
 
 
 ## To destroy 
-> configure aws.tfvars with aws config variables
 
 `terraform destroy -var-file=aws.tfvars --auto-approve`
 
