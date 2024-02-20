@@ -12,7 +12,7 @@
 
 - **Providers**: plugin que interage com diversos provedores de nuvem como AWS, Azure, Google Cloud, Docker, Kubernetes, etc.
 - **Resources**: Componentes individuais que fazem parte da infraestrutura.
-- **Modules**: São blocos reutilizaveis de configurações  que modularizam o código.
+- **Modules**: São blocos reutilizaveis de configurações que modularizam o código, agrupamento de _resources_.
 - **Variables**: Parametrizam os dados de arquivos de configurações.
 - **Components**: Servidor, banco de dados, máquina virtual, vpc, secutiry-group, sub-net, internet gateway, etc...
 - **Idempotency**: idempotência é a caracteristica de se manter inalteravel, o resultado da operação é sempre o mesmo independente das vezes que a operação é executada.
