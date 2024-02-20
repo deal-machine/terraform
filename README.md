@@ -32,6 +32,8 @@ Terraform vs Ansible
 
 - initialize
   - ``terraform init``
+- validate
+  - ``terraform validate``
 - plan
   - ``terraform plan``
 - execute
@@ -47,9 +49,15 @@ Terraform vs Ansible
 
 <br>
 
-> Created AWS Bucket to storage .tfstate -> deal-terraform-bucket
-> 
-> Configure aws.tfvars with aws config variables -> access_key, secret_key, token and region(us-east-1)
+## Requirements
+
+- Created AWS Bucket to storage .tfstate
+  - deal-terraform-bucket
+- Configure aws.tfvars with aws config variables
+  - access_key
+  - secret_key
+  - token
+  - region(us-east-1)
 
 ## To init
 

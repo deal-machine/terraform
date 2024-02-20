@@ -17,3 +17,8 @@ module "rds" {
   subnet_ids = module.vpc.subnet_ids
   sg_ids = [module.eks.sg_ids]
 }
+module "lambda" {
+  source = "./modules/lambda"
+  role_arn = var.role_arn
+
+}

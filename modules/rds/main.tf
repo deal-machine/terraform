@@ -7,7 +7,7 @@ resource "aws_db_subnet_group" "subnet" {
 }
 resource "aws_db_parameter_group" "family" {
   name   = "${var.prefix}-family"
-  family = "postgres14"
+  family = "postgres12"
 
   parameter {
     name  = "log_connections"
@@ -15,7 +15,7 @@ resource "aws_db_parameter_group" "family" {
   }
 }
 resource "aws_db_instance" "rds" {
-    instance_class = "db.t3.micro"
+    instance_class = "db.t2.micro"
     allocated_storage = 5
     max_allocated_storage = 10
     storage_type = "gp2"
@@ -23,7 +23,7 @@ resource "aws_db_instance" "rds" {
     skip_final_snapshot = true
 
     engine = "postgres"
-    engine_version= "14.1"
+    engine_version = "12"
     db_name = "postgres"
     username = "postgres"
     password = "postgres"
