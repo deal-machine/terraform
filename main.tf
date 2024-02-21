@@ -15,7 +15,7 @@ module "rds" {
   source = "./modules/rds"
   prefix = var.prefix
   subnet_ids = module.vpc.subnet_ids
-  sg_ids = [module.eks.sg_ids]
+  vpc_id = module.vpc.vpc_id
 }
 module "lambda" {
   source = "./modules/lambda"

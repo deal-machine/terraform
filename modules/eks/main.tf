@@ -1,6 +1,8 @@
 # CLUSTER
 resource "aws_security_group" "sg" {
     vpc_id =  var.vpc_id 
+    name = "${var.prefix}-eks-sg"
+
     egress {
         from_port = 0
         to_port = 0
