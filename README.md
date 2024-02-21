@@ -34,6 +34,8 @@ Terraform vs Ansible
   - ``terraform init``
 - validate
   - ``terraform validate``
+- format
+  - ``terraform fmt``
 - plan
   - ``terraform plan``
 - execute
@@ -75,6 +77,10 @@ Terraform vs Ansible
 ## To connect on kubectl
 
 `aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>`
+
+## To formate terraform code
+
+`terraform fmt -recursive`
 
 <br> 
 

@@ -1,20 +1,20 @@
-variable prefix {
-    type = string
-    description = "prefix name"
+variable "prefix" {
+  type        = string
+  description = "prefix name"
 }
 variable "retention_days" {
-  type = number
+  type        = number
   description = "log retention days"
 }
 variable "vpc_id" {
-  type = string
+  type        = string
   description = "VPC identification"
 }
 variable "subnet_ids" {
-  type = list(string)
+  type        = list(string)
   description = "Subnets IDS"
 }
 variable "role_arn" {
-    type = string
-    description = "ARN data"
+  type        = string
+  description = "ARN data"
 }

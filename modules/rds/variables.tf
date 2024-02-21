@@ -1,12 +1,12 @@
 variable "subnet_ids" {
-  type = list(string)
+  type        = list(string)
   description = "Subnets IDS"
 }
-variable prefix {
-    type = string
-    description = "prefix name"
+variable "prefix" {
+  type        = string
+  description = "prefix name"
 }
 variable "vpc_id" {
-  type = string
+  type        = string
   description = "VPC identification"
 }

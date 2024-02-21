@@ -18,7 +18,7 @@
 #   tags = {
 #     Name = "${var.prefix}-cluster-role"
 #   }
-  
+
 # }
 
 # resource "aws_iam_role_policy_attachment" "cluster-AmazonEKSClusterPolicy" {

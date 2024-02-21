@@ -1,16 +1,16 @@
 import got from 'got';
 
-export const handler = async(event, context) => {
-  console.log("Event -> ", event)
-  console.log("Context -> ", context)
-    
+export const handler = async(_event, _context) => {
+  const url = process.env.URL
+  console.log("url -> ", url)
+      
   try {
-    const response = await got('https://labs.bible.org/api/?passage=random&type=json')
+    const response = await got(url)
     return {
       statusCode: 200,
       body: JSON.parse(response.body),
     };
-  }catch(err){
+  } catch(err){
     console.error("Error ->", err)
     throw new Error(err)
   }

@@ -1,4 +1,4 @@
 locals {
-    functions_path = "${path.module}/functions"
-    layers_path = "${path.module}/layers"
+  functions_path = "${path.module}/functions"
+  layers_path    = "${path.module}/layers"
 }
