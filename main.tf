@@ -20,5 +20,5 @@ module "rds" {
 module "lambda" {
   source = "./modules/lambda"
   role_arn = var.role_arn
-
+  prefix = var.prefix
 }
