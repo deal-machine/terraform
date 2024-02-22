@@ -43,3 +43,31 @@ module "k8s" {
   database_db_name  = module.rds.database_db_name
   database_hostname = module.rds.rds_hostname
 }
+
+/*
+  adicionar imagem no ecr
+  estudar ci/ci com terraform
+    - git hub actions
+    - merge protegido
+  integrar com servico de autenticação + verificar regras de autenticação
+
+  1 repo api-gateway + lambda (autenticação)
+  1 repo cluster (vpc, eks, k8s)
+  1 repo banco de dados (rds)
+  1 repo app (orderly)
+
+  documentar e detalhar banco de dados
+    - rds (postgres)
+    - redis
+
+  investigar viabilidade de migrar para gcloud
+
+  ssm
+  dns (gratuito)
+  senhas seguras (cofre de senhas)
+  segurança e redes privadas
+
+  agw -> cognito
+  agw -> lambda
+  agw -> rds
+*/

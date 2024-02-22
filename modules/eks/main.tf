@@ -52,3 +52,6 @@ resource "aws_eks_node_group" "node" {
   instance_types = ["t3.micro"]
 }
 
+data "aws_eks_cluster_auth" "auth" {
+  name = aws_eks_cluster.cluster.name
+}
