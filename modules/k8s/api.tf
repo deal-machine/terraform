@@ -37,8 +37,8 @@ resource "kubernetes_deployment" "api_deployment" {
     strategy {
       type = "RollingUpdate"
       rolling_update {
-          max_surge       = "25%" 
-          max_unavailable = "25%" 
+        max_surge       = "25%"
+        max_unavailable = "25%"
       }
     }
     selector {
@@ -115,6 +115,27 @@ resource "kubernetes_deployment" "api_deployment" {
     }
   }
 }
+resource "kubernetes_service" "api_service" {
+  metadata {
+    name      = "api-service"
+    namespace = "orderly"
+  }
+
+  spec {
+    type = "LoadBalancer"
+
+    selector = {
+      app = "api"
+    }
+
+    port {
+      protocol  = "TCP"
+      port      = 3000
+      node_port = 30000 # Only applicable if using "NodePort" type
+    }
+  }
+}
+
 # resource "kubernetes_horizontal_pod_autoscaler" "api_hpa" {
 #   metadata {
 #     name      = "api-hpa"
@@ -144,23 +165,3 @@ resource "kubernetes_deployment" "api_deployment" {
 #     }
 #   }
 # }
-resource "kubernetes_service" "api_service" {
-  metadata {
-    name      = "api-service"
-    namespace = "orderly"
-  }
-
-  spec {
-    type = "LoadBalancer"
-
-    selector = {
-      app = "api"
-    }
-
-    port {
-      protocol  = "TCP"
-      port      = 3000
-      node_port = 30000 # Only applicable if using "NodePort" type
-    }
-  }
-}

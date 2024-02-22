@@ -42,3 +42,13 @@ resource "local_file" "kubeconfig" {
 output "sg_ids" {
   value = aws_security_group.sg.id
 }
+output "aws_eks_cluster_auth" {
+  value = data.aws_eks_cluster_auth.auth.token
+}
+output "aws_eks_cluster_endpoint" {
+  value = aws_eks_cluster.cluster.endpoint
+}
+
+output "aws_eks_certificate" {
+  value = aws_eks_cluster.cluster.certificate_authority[0].data
+}
