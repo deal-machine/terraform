@@ -5,3 +5,5 @@ cidr_block      = "10.0.0.0/16"
 role_arn        = "arn:aws:iam::992382828900:role/LabRole"
 user_arn        = "992382828900"
 subnet_quantity = 2
+cluster_name    = "deal-cluster"
+database_id     = "deal-database"

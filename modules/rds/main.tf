@@ -37,7 +37,7 @@ resource "aws_db_parameter_group" "family" {
   }
 }
 resource "aws_db_instance" "rds" {
-  identifier = "${var.prefix}-db"
+  identifier = var.database_id
 
   instance_class        = "db.t3.micro"
   allocated_storage     = 5
@@ -48,9 +48,10 @@ resource "aws_db_instance" "rds" {
 
   engine         = "postgres"
   engine_version = "14.6"
-  db_name        = "postgres"
+  db_name        = "orderly"
   username       = "postgres"
   password       = "postgres"
+  port           = 5432
 
   db_subnet_group_name   = aws_db_subnet_group.subnet.name
   vpc_security_group_ids = [aws_security_group.sg.id]

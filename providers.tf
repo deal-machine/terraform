@@ -18,13 +18,16 @@ provider "aws" {
   token      = var.token
 }
 
-# provider "kubernetes" {
-#   config_path    = "${local_file.kubeconfig.filename}"
-#   config_context = "${aws_eks_cluster.cluster.name}"
-# }
+data "aws_eks_cluster" "cluster" {
+  name = var.cluster_name
+}
 
-# resource "kubernetes_namespace" "namespace" {
-#   metadata {
-#     name = "aws-namespace"
-#   }
-# }
+data "aws_eks_cluster_auth" "auth" {
+  name = var.cluster_name
+}
+
+provider "kubernetes" {
+  host                   = data.aws_eks_cluster.cluster.endpoint
+  cluster_ca_certificate = base64decode(data.aws_eks_cluster.cluster.certificate_authority[0].data)
+  token                  = data.aws_eks_cluster_auth.auth.token
+}

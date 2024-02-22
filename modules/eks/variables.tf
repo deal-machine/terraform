@@ -18,3 +18,10 @@ variable "role_arn" {
   type        = string
   description = "ARN data"
 }
+variable "cidr_blocks" {
+  default = "0.0.0.0/0"
+}
+variable "cluster_name" {
+  type        = string
+  description = "cluster name"
+}

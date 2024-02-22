@@ -19,6 +19,11 @@ variable "prefix" {
   type        = string
   description = "prefix name"
 }
+variable "cluster_name" {
+  type        = string
+  description = "cluster name"
+}
+
 variable "role_name" {
   type        = string
   description = "role name"
@@ -42,4 +47,9 @@ variable "user_arn" {
 variable "subnet_quantity" {
   type        = number
   description = "subnet quantities"
+}
+
+variable "database_id" {
+  type        = string
+  description = "database_id"
 }

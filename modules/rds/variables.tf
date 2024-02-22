@@ -10,3 +10,7 @@ variable "vpc_id" {
   type        = string
   description = "VPC identification"
 }
+variable "database_id" {
+  type        = string
+  description = "database identification"
+}
