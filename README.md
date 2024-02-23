@@ -69,7 +69,7 @@ Terraform vs Ansible
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
 
-## To destroy 
+## To destroy
 
 `terraform destroy -var-file=aws.tfvars --auto-approve`
 
