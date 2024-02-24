@@ -69,31 +69,21 @@ Terraform vs Ansible
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
 
-## To destroy 
+`terraform apply -var-file=gcloud.tfvars --auto-approve`
+
+## To destroy
 
 `terraform destroy -var-file=aws.tfvars --auto-approve`
+
+`terraform destroy -var-file=gcloud.tfvars --auto-approve`
 
 ## To connect on kubectl
 
 `aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>`
 
+`gcloud container clusters get-credentials deal-cluster --region us-central1 --project orderly-tf`
+
 ## To formate terraform code
 
 `terraform fmt -recursive`
 
-<br> 
-
-## AWS Infrastructure
-
-- VPC - Virtual Private Cloud
-- Subnet
-- AV - Availability Zones
-- Route Table - Routing table for VPC, describe available subnets
-- Internet Gateway - Allow external(public) access
-- Security Group - Firewall
-- Ingress - quem acessa nossos recursos
-- Egress - quem nossos recursos acessam
-
-<div align="center">
-  <img width="1000" src="./assets/vpc.png" />
-</div>

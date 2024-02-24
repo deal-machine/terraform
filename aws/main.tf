@@ -20,6 +20,11 @@ module "rds" {
   vpc_id      = module.vpc.vpc_id
   database_id = var.database_id
 }
+module "api-gateway" {
+  source     = "./modules/api-gateway"
+  prefix     = var.prefix
+  invoke_arn = module.lambda.invoke_arn
+}
 module "lambda" {
   source        = "./modules/lambda"
   role_arn      = var.role_arn
@@ -27,11 +32,6 @@ module "lambda" {
   execution_arn = module.api-gateway.execution_arn
   region        = var.region
   user_arn      = var.user_arn
-}
-module "api-gateway" {
-  source     = "./modules/api-gateway"
-  prefix     = var.prefix
-  invoke_arn = module.lambda.invoke_arn
 }
 module "k8s" {
   source            = "./modules/k8s"
