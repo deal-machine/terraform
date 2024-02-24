@@ -1,0 +1,4 @@
+access_key = "ASIA6ODVAIFSKI4IJP7P"
+secret_key = "MmR2OGYcBei3jHHd+rfJVQrGLheYX/bqVGnlrR08"
+token      = "FwoGZXIvYXdzEKD//////////wEaDI7W8xPJvhpNMVLysSLBAcPCv1Pf/4m6vHT07kAvMpv3w5/N5dzIVh5+jLvOanCWp3HwYDVplicc3D+AkhgSnIOQ74KmgTI9S+DfrQcx6M8tzL9g2GO482ousAhNmIxMXS+yRd2eK8i467aQjAt419zXB8SNN9r5rGEo8a1Jg0D2RuhUMUt5jy7zzONXZBupFSyFXeTbp5sJmYrbtbfUIQdVSD5zGnUy9eVllP168SdGVVG7xoCZ/zSmOeDyvr0bg5FNhXlnSl4qLPsASMisjCIo2svirgYyLXNARPBgVsS5ImdXV9FtqXFTuRhSBvvAGo9lHFeCuVbhEp8EoK6qpvKXxcl1QA=="
+region     = "us-east-1"
