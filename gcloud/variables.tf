@@ -1,6 +1,6 @@
 variable "project_id" {
   type        = string
-  description = "database_id"
+  description = "project_id"
 }
 variable "region" {
   type        = string

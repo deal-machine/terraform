@@ -9,16 +9,14 @@ terraform {
     prefix = "terraform/state"
   }
 }
-
 provider "google" {
   project     = var.project_id
   region      = var.region
   credentials = file("./credentials.json")
   zone        = var.zone
 }
-
-# provider "kubernetes" {
-#   host                   = module.gke.cluster_endpoint
-#   token                  = module.gke.cluster_auth
-#   cluster_ca_certificate = base64decode(module.gke.certificate)
-# }
+provider "kubernetes" {
+  host                   = module.gke.cluster_endpoint
+  token                  = module.gke.cluster_auth
+  cluster_ca_certificate = base64decode(module.gke.certificate)
+}

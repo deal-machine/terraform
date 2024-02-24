@@ -22,11 +22,12 @@ resource "google_sql_user" "user" {
   password = random_password.postgres_password.result
   instance = google_sql_database_instance.postgres.name
 }
-
 resource "random_password" "postgres_password" {
   length  = 16
   special = true
 }
+
+
 # api gatway
 # resource "google_apigateway_api" "apigateway" {
 #   display_name = "${var.prefix}-apigateway"
@@ -52,16 +53,4 @@ resource "random_password" "postgres_password" {
 #   backend {
 #     group = google_sql_database_instance.postgres.name
 #   }
-# }
-
-# resource "google_compute_firewall" "allow_api_gateway_traffic" {
-#   name    = "${var.prefix}-allow-api-gateway-traffic"
-#   network = var.network_name
-
-#   allow {
-#     protocol = "tcp"
-#     ports    = ["5432"] # Porta do Postgres
-#   }
-
-#   source_ranges = [google_apigateway_api.apigateway.default_location_settings[0].address]
 # }

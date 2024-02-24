@@ -8,11 +8,11 @@ resource "kubernetes_config_map" "api_configmap" {
   data = {
     PORT             = "3000"
     NODE_ENV         = "production"
-    DB_HOST          = var.database_hostname
-    DB_USERNAME      = var.database_username
-    DB_PORT          = var.database_port
-    DB_PASSWORD      = var.database_password
-    DB_NAME          = var.database_db_name
+    DB_HOST          = var.db_host
+    DB_USERNAME      = var.db_username
+    DB_PORT          = var.db_port
+    DB_PASSWORD      = var.db_password
+    DB_NAME          = var.db_name
     DB_DIALECT       = "postgres"
     AMQP_USERNAME    = "admin"
     AMQP_PASSWORD    = "admin"
