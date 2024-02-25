@@ -5,8 +5,8 @@ terraform {
     local  = ">= 2.4.1"
   }
   backend "gcs" { # cloud storage
-    bucket = "deal-terraform-bucket"
-    prefix = "terraform/state"
+    bucket = "deal-bucket-tf"
+    prefix = "tf/state"
   }
 }
 provider "google" {

@@ -3,6 +3,7 @@ module "vpc" {
   prefix     = var.prefix
   region     = var.region
   project_id = var.project_id
+  cidr = var.cidr
 }
 module "sql" {
   source     = "./modules/sql"
@@ -10,6 +11,7 @@ module "sql" {
   prefix     = var.prefix
   region     = var.region
   project_id = var.project_id
+  cidr = var.cidr
 }
 module "gke" {
   source               = "./modules/gke"

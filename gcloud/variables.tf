@@ -6,6 +6,11 @@ variable "region" {
   type        = string
   description = "region"
 }
+variable "cidr" {
+  type        = string
+  description = "cidr"
+}
+
 variable "zone" {
   type        = string
   description = "region zone"
