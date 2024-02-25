@@ -8,3 +8,6 @@ output "cluster_auth" {
 output "certificate" {
   value = google_container_cluster.cluster.master_auth[0].cluster_ca_certificate
 }
+output "cluster_ipv4_cidr" {
+  value = google_container_cluster.cluster.cluster_ipv4_cidr
+}

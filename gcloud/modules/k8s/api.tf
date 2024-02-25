@@ -149,7 +149,7 @@ resource "kubernetes_service" "api_service" {
 #     }
 
 #     min_replicas = 1
-#     max_replicas = 10
+#     max_replicas = 2
 
 #     metric {
 #       type = "Resource"
@@ -158,7 +158,7 @@ resource "kubernetes_service" "api_service" {
 #         name = "cpu"
 #         target {
 #           type                = "Utilization"
-#           average_utilization = 70
+#           average_utilization = 90
 #         }
 #       }
 #     }

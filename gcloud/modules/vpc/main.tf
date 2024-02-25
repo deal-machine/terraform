@@ -24,20 +24,6 @@ resource "google_compute_firewall" "allow_sql_external" {
   source_ranges = ["0.0.0.0/0"] # Permitir acesso de qualquer IP externo
 }
 
-# Permite tráfego de saída do GKE para o Cloud SQL
-# resource "google_compute_firewall" "allow_sql" {
-#   name    = "${var.prefix}-allow-sql"
-#   network = google_compute_network.vpc.self_link
-
-#   allow {
-#     protocol = "tcp"
-#     ports    = ["5432"]
-#   }
-
-#   source_ranges = [google_compute_subnetwork.subnet.ip_cidr_range]
-#   target_tags   = [var.cluster_target_tag] # google_container_cluster.my_cluster.node_pool_defaults[0].instance_group_urls[0]
-# }
-
 # resource "google_compute_instance" "vm" {
 #   name                      = "${var.prefix}-vm"
 #   machine_type              = "f1-micro"

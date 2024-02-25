@@ -4,11 +4,25 @@ resource "google_sql_database_instance" "postgres" {
   region              = var.region
   project             = var.project_id
   deletion_protection = false
+
   settings {
     tier = "db-f1-micro"
     ip_configuration {
       ipv4_enabled = true # Ativado acesso público
       #   private_network = var.network_id
+      
+      authorized_networks {
+        name = "my-local-ip"
+        value = "187.23.249.217"
+      }
+      # authorized_networks {
+      #   name = "open-house"
+      #   value = "0.0.0.0/0"
+      # }
+      # authorized_networks {
+      #   name = "gke-network"
+      #   value = var.cidr
+      # }
     }
   }
 }
@@ -19,7 +33,7 @@ resource "google_sql_database" "database" {
 }
 resource "google_sql_user" "user" {
   name     = var.prefix
-  password = random_password.postgres_password.result
+  password = "password"
   instance = google_sql_database_instance.postgres.name
 }
 resource "random_password" "postgres_password" {

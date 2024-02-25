@@ -5,3 +5,6 @@ output "database_connection_info" {
 output "cluster_endpoint" {
   value = module.gke.cluster_endpoint
 }
+output "cluster_ipv4_cidr" {
+  value = module.gke.cluster_ipv4_cidr
+}
