@@ -65,6 +65,8 @@ Terraform vs Ansible
 
 `terraform init -var-file=aws.tfvars`
 
+`terraform init -var-file=gcloud.tfvars`
+
 ## To run 
 
 `terraform apply -var-file=aws.tfvars --auto-approve`
@@ -81,7 +83,7 @@ Terraform vs Ansible
 
 `aws eks update-kubeconfig --name <nome-do-seu-cluster-EKS>`
 
-`gcloud container clusters get-credentials deal-cluster --region us-central1 --project orderly-tf`
+`gcloud container clusters get-credentials deal-cluster --region us-central1 --project <nome-do-projeto>`
 
 ## To formate terraform code
 
