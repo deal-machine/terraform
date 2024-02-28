@@ -3,5 +3,7 @@
 ./aws/aws.tfvars
 ./gcloud/gcloud.tfvars
 **/**/node_modules
-./gcloud/gcloud.tfvars
-./gcloud/credentials.json
+**/gcp/gcloud.tfvars
+**/gcp/credentials.json
+**/**/credentials.json
+
