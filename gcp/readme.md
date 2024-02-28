@@ -15,8 +15,8 @@
 - Create a service account
   - with basic/editor role
   - create keys and credentials
-- Create on google-cloud-storage a Bucket to storage .tfstate
+- Create on google-cloud-storage(optional) a Bucket to storage .tfstate
   - deal-terraform-bucket
-- Configure gcloud.tfvars with gcp config variables
+- Configure gcloud.tfvars with gcp config variables (optional)
   - project_id
   - region
